@@ -21,11 +21,11 @@ function insert_rating(rating)
 {
     var container = document.createElement('div');
 
-    container.className = 'dev_row spcr_rating';
+    container.className = 'dev_row spcr_rating_row';
     container.title = 'As seen by spcr.netlify.com';
 
     var link = document.createElement('a');
-    link.className = 'spcr_rating_' + rating;
+    link.className = 'spcr_rating_link spcr_rating_' + rating;
 
     link.href = SPCR_HOMEPAGE + 'app/' + get_current_app_id();
     link.textContent = rating;
