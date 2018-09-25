@@ -14,7 +14,8 @@
   "content_scripts": [
     {
       "matches": ["https://store.steampowered.com/app/*"],
-      "js": ["spcr.js"]
+      "js": ["spcr.js"],
+      "css": ["spcr.css"]
     }
   ]
 
