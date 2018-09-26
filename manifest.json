@@ -6,6 +6,10 @@
 
   "description": "Shows ratings from spcr.netlify.com on Steam",
 
+  "permissions" : [
+      "https://spcr.netlify.com/data/*"
+  ],
+
   "icons": {
     "48": "icons/spcr-48.png",
     "96": "icons/spcr-96.png"
