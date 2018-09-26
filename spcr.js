@@ -90,29 +90,33 @@ function insert_rating(rating)
 
 function main()
 {
-    var request = new XMLHttpRequest();
-    request.onreadystatechange = function()
+    // Don't show spcr rating if native game
+    if (document.querySelector('span.platform_img.linux') === null)
     {
-        var rating;
-
-        if (request.readyState == 4 && request.status == 200)
+        var request = new XMLHttpRequest();
+        request.onreadystatechange = function()
         {
-            var response = request.responseText;
+            var rating;
 
-            if (response.charAt(0) != '<')
+            if (request.readyState == 4 && request.status == 200)
             {
-                var reports = JSON.parse(response);
-                rating = estimate_rating(reports);
+                var response = request.responseText;
+
+                if (response.charAt(0) != '<')
+                {
+                    var reports = JSON.parse(response);
+                    rating = estimate_rating(reports);
+                }
+            }
+
+            if (rating)
+            {
+                insert_rating(rating);
             }
         }
-
-        if (rating)
-        {
-            insert_rating(rating);
-        }
+        request.open("GET", SPCR_HOMEPAGE + 'data/reports/app/' + get_current_app_id() + '.json', true);
+        request.send(null);
     }
-    request.open("GET", SPCR_HOMEPAGE + 'data/reports/app/' + get_current_app_id() + '.json', true);
-    request.send(null);
 }
 
 main();
