@@ -8,3 +8,28 @@
  {
      margin-top: 13px;
  }
+
+.spcr_rating_Borked
+{
+    color: #FF1919 !important;
+}
+
+.spcr_rating_Bronze
+{
+    color: #CD7F32 !important;
+}
+
+.spcr_rating_Silver
+{
+    color: #C0C0C0 !important;
+}
+
+.spcr_rating_Gold
+{
+    color: #FFD799 !important;
+}
+
+.spcr_rating_Platinum
+{
+    color: #B4C7DC !important;
+}
