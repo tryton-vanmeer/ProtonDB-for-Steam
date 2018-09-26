@@ -6,9 +6,10 @@
 
 'use strict';
 
-var SPCR_HOMEPAGE = "https://spcr.netlify.com/"
+const SPCR_HOMEPAGE = "https://spcr.netlify.com/";
+const RATING_OPTIONS = ['Borked', 'Bronze', 'Silver', 'Gold', 'Platinum'];
 
-
+/* Get the game's appid from the url */
 function get_current_app_id()
 {
     var url = window.location.href;
@@ -17,6 +18,48 @@ function get_current_app_id()
     return parseInt(appid[2], 10);
 }
 
+function rating_to_int(rating)
+{
+    return RATING_OPTIONS.findIndex(s => s.toLowerCase() === rating.toLowerCase()) + 1;
+}
+
+function average(reports, precision = 2)
+{
+    var tally = 0;
+    reports.forEach(r =>
+    {
+        tally += rating_to_int(r.rating);
+    });
+    return (tally / reports.length).toPrecision(precision);
+}
+
+function confidence(reports)
+{
+    if (reports.length < 3)
+    {
+        return 0;
+    } else if (reports.length < 8)
+    {
+        return 1;
+    } else if (reports.length < 15)
+    {
+        return 2;
+    } else if (reports.length < 25)
+    {
+        return 3;
+    } else
+    {
+        return 4;
+    }
+}
+
+function estimate_rating(reports, confidenceThreshold = 1)
+{
+    return (confidenceThreshold && confidence(reports) < confidenceThreshold)
+        ? 'Pending' : RATING_OPTIONS[Math.round(average(reports)) - 1]
+}
+
+/* Insert the SPCR rating below DEVELOPER/PUBLISHER */
 function insert_rating(rating)
 {
     var container = document.createElement('div');
@@ -45,5 +88,31 @@ function insert_rating(rating)
     }
 }
 
+function main()
+{
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function()
+    {
+        var rating;
 
-insert_rating("gold");
+        if (request.readyState == 4 && request.status == 200)
+        {
+            var response = request.responseText;
+
+            if (response.charAt(0) != '<')
+            {
+                var reports = JSON.parse(response);
+                rating = estimate_rating(reports);
+            }
+        }
+
+        if (rating)
+        {
+            insert_rating(rating);
+        }
+    }
+    request.open("GET", SPCR_HOMEPAGE + 'data/reports/app/' + get_current_app_id() + '.json', true);
+    request.send(null);
+}
+
+main();
