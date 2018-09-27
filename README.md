@@ -1,5 +1,5 @@
 # SPCR for Steam
-Shows ratings from [spcr.netlify.com](spcr.netlify.com) on Steam
+Shows ratings from [spcr.netlify.com](https://spcr.netlify.com) on Steam
 
 ### Screenshots
 
