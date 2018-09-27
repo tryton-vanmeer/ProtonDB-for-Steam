@@ -59,6 +59,19 @@ function estimate_rating(reports, confidenceThreshold = 1)
         ? 'Pending' : RATING_OPTIONS[Math.round(average(reports)) - 1]
 }
 
+function parse_reports(response)
+{
+    var rating;
+
+    if (response.charAt(0) != '<')
+    {
+        var reports = JSON.parse(response);
+        rating = estimate_rating(reports);
+    }
+
+    return rating;
+}
+
 /* Insert the SPCR rating below DEVELOPER/PUBLISHER */
 function insert_rating(rating)
 {
@@ -96,22 +109,16 @@ function main()
         var request = new XMLHttpRequest();
         request.onreadystatechange = function()
         {
-            var rating;
-
             if (request.readyState == 4 && request.status == 200)
             {
                 var response = request.responseText;
 
-                if (response.charAt(0) != '<')
-                {
-                    var reports = JSON.parse(response);
-                    rating = estimate_rating(reports);
-                }
-            }
+                var rating = parse_reports(request.responseText);
 
-            if (rating)
-            {
-                insert_rating(rating);
+                if (rating)
+                {
+                    insert_rating(rating);
+                }
             }
         }
         request.open("GET", SPCR_HOMEPAGE + 'data/reports/app/' + get_current_app_id() + '.json', true);
