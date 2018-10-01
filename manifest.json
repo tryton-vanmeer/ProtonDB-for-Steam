@@ -7,7 +7,8 @@
   "description": "Shows ratings from spcr.netlify.com on Steam",
 
   "permissions" : [
-      "https://spcr.netlify.com/data/*"
+      "https://spcr.netlify.com/data/*",
+      "storage"
   ],
 
   "icons": {
@@ -21,6 +22,16 @@
       "js": ["src/spcr.js"],
       "css": ["src/spcr.css"]
     }
-  ]
+],
+
+"options_ui": {
+    "page": "options.html"
+},
+
+"applications": {
+    "gecko": {
+        "id": "spcr-for-steam@tryton-vanmeer.github.io"
+    }
+}
 
 }
