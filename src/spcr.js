@@ -9,6 +9,11 @@
 const SPCR_HOMEPAGE = "https://spcr.netlify.com/";
 const RATING_OPTIONS = ['Borked', 'Bronze', 'Silver', 'Gold', 'Platinum'];
 
+function on_error(error)
+{
+    console.log("Error: $(error)");
+}
+
 /* Get the game's appid from the url */
 function get_current_app_id()
 {
@@ -85,6 +90,14 @@ function insert_rating(rating)
 
     link.href = SPCR_HOMEPAGE + 'app/' + get_current_app_id();
     link.textContent = rating;
+
+    var option_new_tab = browser.storage.local.get('new_tab');
+    option_new_tab.then((item) => {
+        if (item.new_tab)
+        {
+            link.target = '_blank';
+        }
+    }, on_error);
 
     var subtitle = document.createElement('div');
     subtitle.className = 'subtitle column';
