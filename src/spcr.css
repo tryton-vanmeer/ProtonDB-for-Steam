@@ -7,29 +7,30 @@
  .spcr_rating_row
  {
      margin-top: 13px;
+     text-transform: capitalize;
  }
 
-.spcr_rating_Borked
+.spcr_rating_borked
 {
     color: #FF1919 !important;
 }
 
-.spcr_rating_Bronze
+.spcr_rating_bronze
 {
     color: #CD7F32 !important;
 }
 
-.spcr_rating_Silver
+.spcr_rating_silver
 {
     color: #C0C0C0 !important;
 }
 
-.spcr_rating_Gold
+.spcr_rating_gold
 {
     color: #FFD799 !important;
 }
 
-.spcr_rating_Platinum
+.spcr_rating_platinum
 {
     color: #B4C7DC !important;
 }
