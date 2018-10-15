@@ -2,7 +2,7 @@
 
   "manifest_version": 2,
   "name": "SPCR for Steam",
-  "version": "1.1.0",
+  "version": "1.2.0",
 
   "description": "Shows ratings from spcr.netlify.com on Steam",
 
