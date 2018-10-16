@@ -4,7 +4,7 @@ var log = document.getElementById('status');
 
 function restore()
 {
-    browser.storage.local.get({
+    chrome.storage.local.get({
         'new_tab': false
     }, prefs => {
         Object.keys(prefs).forEach(name => {
@@ -19,7 +19,7 @@ function save() {
         'new_tab': document.getElementById('new_tab').checked
     };
 
-    browser.storage.local.set(prefs, () => {
+    chrome.storage.local.set(prefs, () => {
         log.textContent = 'Options saved.';
         setTimeout(() => log.textContent = '', 750);
         restore();

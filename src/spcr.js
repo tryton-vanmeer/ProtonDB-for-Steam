@@ -50,13 +50,12 @@ function insert_rating(rating)
     link.href = SPCR_HOMEPAGE + 'app/' + get_current_app_id();
     link.textContent = rating;
 
-    var option_new_tab = browser.storage.local.get('new_tab');
-    option_new_tab.then((item) => {
-        if (item.new_tab)
+    var option_new_tab = chrome.storage.local.get('new_tab', result => {
+        if (result.new_tab)
         {
-            link.target = '_blank';
+            link.target = '_blank'
         }
-    }, on_error);
+    });
 
     var subtitle = document.createElement('div');
     subtitle.className = 'subtitle column';
