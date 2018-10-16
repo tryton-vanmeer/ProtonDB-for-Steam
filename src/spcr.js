@@ -88,6 +88,9 @@ function main()
                 {
                     insert_rating(rating);
                 }
+            } else if (request.readyState == 4 && request.status == 404)
+            {
+                insert_rating("Awaiting reports!")
             }
         }
         request.open("GET", SPCR_HOMEPAGE + API_ENDPOINT + get_current_app_id() + '.json', true);
