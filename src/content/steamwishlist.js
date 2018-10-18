@@ -20,7 +20,6 @@ function insert_rating(wishlist_row, rating) {
         });
 
         var element = wishlist_row.getElementsByClassName("stats")[0];
-        console.log(element);
 
         if (element) {
             element.append(label);
@@ -28,7 +27,7 @@ function insert_rating(wishlist_row, rating) {
         }
 }
 
-var callback = function(mutationsList, observer) {
+var callback = function(mutationsList) {
     for (var mutation of mutationsList) {
         let wishlist_row = mutation.addedNodes[0];
         if (wishlist_row) {
@@ -40,9 +39,9 @@ var callback = function(mutationsList, observer) {
                     if (request.readyState == 4) {
                         if (request.status == 200) {
                             var json = JSON.parse(request.responseText);
-                            insert_rating(wishlist_row, json.tier)
+                            insert_rating(wishlist_row, json.tier);
                         } else if (request.status == 404) {
-                            insert_rating(wishlist_row, "Awaiting reports!")
+                            insert_rating(wishlist_row, "Awaiting reports!");
                         }
                     }
                 });
