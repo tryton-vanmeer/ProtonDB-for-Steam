@@ -10,6 +10,12 @@
      text-transform: capitalize;
  }
 
+ /* Override wishlist font weight for rating to appear more vibrant  */
+ .value.spcr_rating
+ {
+     font-weight: 500;
+ }
+
 .spcr_rating_borked
 {
     color: #FF1919 !important;
