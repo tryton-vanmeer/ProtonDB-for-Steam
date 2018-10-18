@@ -6,9 +6,17 @@ Shows ratings from [spcr.netlify.com](https://spcr.netlify.com) on Steam
 
 ### Screenshots
 
-![Screenshot Settings](assets/screenshot_settings.png)
+<div align=center>
+
 ![Screenshot Borked](assets/screenshot_borked.png)
+
 ![Screenshot Bronze](assets/screenshot_bronze.png)
+
 ![Screenshot Silver](assets/screenshot_silver.png)
+
 ![Screenshot Gold](assets/screenshot_gold.png)
+
 ![Screenshot Platinum](assets/screenshot_platinum.png)
+
+![Screenshot Wishlist](assets/screenshot_wishlist.png)
+</div>
