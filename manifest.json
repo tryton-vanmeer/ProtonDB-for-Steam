@@ -21,6 +21,11 @@
       "matches": ["https://store.steampowered.com/app/*"],
       "js": ["src/libspcr.js", "src/content/steamapp.js"],
       "css": ["src/spcr.css"]
+    },
+    {
+        "matches": ["https://store.steampowered.com/wishlist/*"],
+        "js": ["src/libspcr.js", "src/content/steamwishlist.js"],
+        "css": ["src/spcr.css"]
     }
 ],
 
