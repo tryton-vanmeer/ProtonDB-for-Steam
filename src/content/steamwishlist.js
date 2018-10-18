@@ -14,8 +14,7 @@ function insert_rating(wishlist_row, rating) {
         link.textContent = rating;
 
         chrome.storage.local.get('new_tab', result => {
-            if (result.new_tab)
-            {
+            if (result.new_tab) {
                 link.target = '_blank'
             }
         });
@@ -52,6 +51,10 @@ var callback = function(mutationsList, observer) {
     }
 };
 
-// Create observer for wishlist
-var observer = new MutationObserver(callback);
-observer.observe(document.getElementById("wishlist_ctn"), {childList: true});
+chrome.storage.local.get("wishlist_ratings", result => {
+    if (result.wishlist_ratings) {
+        // Create observer for wishlist
+        var observer = new MutationObserver(callback);
+        observer.observe(document.getElementById("wishlist_ctn"), {childList: true});
+    }
+});

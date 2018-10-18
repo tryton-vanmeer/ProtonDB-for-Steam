@@ -5,7 +5,8 @@ var log = document.getElementById('status');
 function restore()
 {
     chrome.storage.local.get({
-        'new_tab': false
+        'new_tab': false,
+        'wishlist_ratings': false
     }, prefs => {
         Object.keys(prefs).forEach(name => {
             document.getElementById(name)[typeof prefs[name]
@@ -16,7 +17,8 @@ function restore()
 
 function save() {
     const prefs = {
-        'new_tab': document.getElementById('new_tab').checked
+        'new_tab': document.getElementById('new_tab').checked,
+        'wishlist_ratings': document.getElementById('wishlist_ratings').checked
     };
 
     chrome.storage.local.set(prefs, () => {
