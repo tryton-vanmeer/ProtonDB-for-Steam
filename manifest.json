@@ -4,10 +4,10 @@
   "name": "SPCR for Steam",
   "version": "1.3.0",
 
-  "description": "Shows ratings from spcr.netlify.com on Steam",
+  "description": "Shows ratings from protondb.com on Steam",
 
   "permissions" : [
-      "https://spcr.netlify.com/data/*",
+      "https://www.protondb.com/*",
       "storage"
   ],
 

@@ -10,7 +10,7 @@ class Steam {
 }
 
 class SPCR {
-    static get HOMEPAGE() {return "https://spcr.netlify.com/";}
+    static get HOMEPAGE() {return "https://www.protondb.com/";}
     static get API_SUMMARY() {return "api/v1/reports/summaries/";}
 
     static request_summary(appid, callback) {
