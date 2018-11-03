@@ -20,3 +20,7 @@ Shows ratings from [protondb.com](https://www.protondb.com/) on Steam
 
 ![Screenshot Wishlist](assets/screenshot_wishlist.png)
 </div>
+
+### Chrome extension not found!
+![Screenshot Take Down](https://i.imgur.com/szSIeex.png)
+Thanks Google!
