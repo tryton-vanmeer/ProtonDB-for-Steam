@@ -8,7 +8,7 @@ function insert_rating(wishlist_row, rating) {
         label.textContent = "SPCR Rating:";
 
         var link = document.createElement('a');
-        link.title = 'As seen by spcr.netlify.com';
+        link.title = 'As seen by protondb.com';
         link.className = "value spcr_rating spcr_rating_" + rating;
         link.href = SPCR.HOMEPAGE + 'app/' + appid;
         link.textContent = rating;
