@@ -4,39 +4,39 @@
  * See the LICENSE file in this distribution.
  */
 
- .spcr_rating_row
+ .protondb_rating_row
  {
      margin-top: 13px;
      text-transform: capitalize;
  }
 
  /* Override wishlist font weight for rating to appear more vibrant  */
- .value.spcr_rating
+ .value.protondb_rating
  {
      font-weight: 500;
  }
 
-.spcr_rating_borked
+.protondb_rating_borked
 {
     color: #FF1919 !important;
 }
 
-.spcr_rating_bronze
+.protondb_rating_bronze
 {
     color: #CD7F32 !important;
 }
 
-.spcr_rating_silver
+.protondb_rating_silver
 {
     color: #C0C0C0 !important;
 }
 
-.spcr_rating_gold
+.protondb_rating_gold
 {
     color: #FFD799 !important;
 }
 
-.spcr_rating_platinum
+.protondb_rating_platinum
 {
     color: #B4C7DC !important;
 }

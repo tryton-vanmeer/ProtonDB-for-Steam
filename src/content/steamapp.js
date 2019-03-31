@@ -1,16 +1,16 @@
 'use strict'
 
-// Insert the SPCR rating below DEVELOPER/PUBLISHER
+// Insert the ProtonDB rating below DEVELOPER/PUBLISHER
 function insert_rating(rating) {
     var container = document.createElement("div");
 
-    container.className = "dev_row spcr_rating_row";
-    container.title = "As seen by spcr.netlify.com";
+    container.className = "dev_row protondb_rating_row";
+    container.title = "As seen by protondb.com";
 
     var link = document.createElement("a");
-    link.className = "spcr_rating_link spcr_rating_" + rating;
+    link.className = "protondb_rating_link protondb_rating_" + rating;
 
-    link.href = SPCR.HOMEPAGE + "app/" + Steam.get_app_id(window.location.href);
+    link.href = ProtonDB.HOMEPAGE + "app/" + Steam.get_app_id(window.location.href);
     link.textContent = rating;
 
     var option_new_tab = chrome.storage.local.get("new_tab", result => {
@@ -21,7 +21,7 @@ function insert_rating(rating) {
 
     var subtitle = document.createElement("div");
     subtitle.className = "subtitle column'";
-    subtitle.textContent = "SPCR Rating:";
+    subtitle.textContent = "ProtonDB Rating:";
 
     container.appendChild(subtitle);
     container.appendChild(link);
@@ -37,7 +37,7 @@ function insert_rating(rating) {
 if (document.querySelector("span.platform_img.linux") === null) {
     var appid = Steam.get_app_id(window.location.href);
 
-    SPCR.request_summary(appid, (request) => {
+    ProtonDB.request_summary(appid, (request) => {
         if (request.readyState == 4) {
             if (request.status == 200) {
                 var json = JSON.parse(request.responseText)

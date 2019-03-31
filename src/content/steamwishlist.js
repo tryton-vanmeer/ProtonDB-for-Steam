@@ -5,12 +5,12 @@ function insert_rating(wishlist_row, rating) {
 
         var label = document.createElement("div");
         label.className = "label";
-        label.textContent = "SPCR Rating:";
+        label.textContent = "ProtonDB Rating:";
 
         var link = document.createElement('a');
-        link.title = 'As seen by spcr.netlify.com';
-        link.className = "value spcr_rating spcr_rating_" + rating;
-        link.href = SPCR.HOMEPAGE + 'app/' + appid;
+        link.title = 'As seen by protondb.com';
+        link.className = "value protondb_rating protondb_rating_" + rating;
+        link.href = ProtonDB.HOMEPAGE + 'app/' + appid;
         link.textContent = rating;
 
         chrome.storage.local.get('new_tab', result => {
@@ -32,10 +32,10 @@ var callback = function(mutationsList) {
         let wishlist_row = mutation.addedNodes[0];
         if (wishlist_row) {
             if (wishlist_row.querySelector("span.platform_img.linux") === null &&
-                wishlist_row.getElementsByClassName("spcr_rating").length == 0) {
+                wishlist_row.getElementsByClassName("protondb_rating").length == 0) {
                 let appid = wishlist_row.attributes["data-app-id"].nodeValue;
-        
-                SPCR.request_summary(appid, (request) => {
+
+                ProtonDB.request_summary(appid, (request) => {
                     if (request.readyState == 4) {
                         if (request.status == 200) {
                             var json = JSON.parse(request.responseText);

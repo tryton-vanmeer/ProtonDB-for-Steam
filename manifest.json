@@ -19,13 +19,13 @@
   "content_scripts": [
     {
       "matches": ["https://store.steampowered.com/app/*"],
-      "js": ["src/libspcr.js", "src/content/steamapp.js"],
-      "css": ["src/spcr.css"]
+      "js": ["src/libprotondb.js", "src/content/steamapp.js"],
+      "css": ["src/protondb.css"]
     },
     {
         "matches": ["https://store.steampowered.com/wishlist/*"],
-        "js": ["src/libspcr.js", "src/content/steamwishlist.js"],
-        "css": ["src/spcr.css"]
+        "js": ["src/libprotondb.js", "src/content/steamwishlist.js"],
+        "css": ["src/protondb.css"]
     }
 ],
 
