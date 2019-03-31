@@ -1,7 +1,7 @@
 # SPCR for Steam
 Shows ratings from [protondb.com](https://www.protondb.com/) on Steam
 
-[![Get the Addon](https://addons.cdn.mozilla.net/static/img/addons-buttons/AMO-button_1.png)](https://addons.mozilla.org/en-CA/firefox/addon/spcr-for-steam/)
+[![Get the Addon](https://addons.cdn.mozilla.net/static/img/addons-buttons/AMO-button_1.png)](https://addons.mozilla.org/en-CA/firefox/addon/protondb-for-steam/)
 
 ### Screenshots
 
