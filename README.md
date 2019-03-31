@@ -2,7 +2,6 @@
 Shows ratings from [protondb.com](https://www.protondb.com/) on Steam
 
 [![Get the Addon](https://addons.cdn.mozilla.net/static/img/addons-buttons/AMO-button_1.png)](https://addons.mozilla.org/en-CA/firefox/addon/spcr-for-steam/)
-[![Available in the Chrome Web Store](https://developer.chrome.com/webstore/images/ChromeWebStore_BadgeWBorder_v2_206x58.png)](https://chrome.google.com/webstore/detail/spcr-for-steam/emmcoldocnolgakkbigkjjfabjpenkla)
 
 ### Screenshots
 
