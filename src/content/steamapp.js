@@ -37,14 +37,11 @@ function insert_rating(rating) {
 if (document.querySelector("span.platform_img.linux") === null) {
     var appid = Steam.get_app_id(window.location.href);
 
-    ProtonDB.request_summary(appid, (request) => {
-        if (request.readyState == 4) {
-            if (request.status == 200) {
-                var json = JSON.parse(request.responseText)
-                insert_rating(json.tier);
-            } else if (request.status == 404) {
-                insert_rating("Awaiting reports!");
-            }
+    ProtonDB.request_rating(appid, (rating) => {
+        if (rating == "pending") {
+            insert_rating("Awaiting reports!");
+        } else {
+            insert_rating(rating);
         }
     });
 }
