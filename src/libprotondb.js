@@ -21,4 +21,12 @@ class ProtonDB {
         request.open("GET", this.HOMEPAGE + this.API_SUMMARY + appid + ".json", true);
         request.send(null);
     }
+
+    static request_rating(appid, callback)
+    {
+        chrome.runtime.sendMessage(
+            {contentScriptQuery: "queryRating", appid: appid},
+            rating => callback(rating)
+        );
+    }
 }

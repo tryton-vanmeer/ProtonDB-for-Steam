@@ -29,6 +29,11 @@
     }
 ],
 
+"background": {
+  "scripts": ["src/background.js"],
+  "persistent": false
+},
+
 "options_ui": {
     "page": "src/options.html",
     "chrome_style": true

@@ -35,14 +35,11 @@ var callback = function(mutationsList) {
                 wishlist_row.getElementsByClassName("protondb_rating").length == 0) {
                 let appid = wishlist_row.attributes["data-app-id"].nodeValue;
 
-                ProtonDB.request_summary(appid, (request) => {
-                    if (request.readyState == 4) {
-                        if (request.status == 200) {
-                            var json = JSON.parse(request.responseText);
-                            insert_rating(wishlist_row, json.tier);
-                        } else if (request.status == 404) {
-                            insert_rating(wishlist_row, "Awaiting reports!");
-                        }
+                ProtonDB.request_rating(appid, (rating) => {
+                    if (rating == "pending") {
+                        insert_rating(wishlist_row, "Awaiting reports!");
+                    } else {
+                        insert_rating(wishlist_row, rating);
                     }
                 });
             }
