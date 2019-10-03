@@ -27,6 +27,8 @@
     background-color: #333333 !important;
     padding-left: 2px;
     padding-right: 4px;
+    padding-top: 4px;
+    margin-top: -4px;
 }
 
 .protondb_rating_borked
