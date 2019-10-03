@@ -4,39 +4,52 @@
  * See the LICENSE file in this distribution.
  */
 
- .protondb_rating_row
- {
-     margin-top: 13px;
-     text-transform: capitalize;
- }
+.protondb_rating_row
+{
+    margin-top: 13px;
+    text-transform: capitalize;
+    text-shadow: 1px 0px #000;
+    border-radius: 2px;
+}
 
- /* Override wishlist font weight for rating to appear more vibrant  */
- .value.protondb_rating
- {
-     font-weight: 500;
- }
+/* Override wishlist font weight for rating to appear more vibrant  */
+.value.protondb_rating
+{
+    font-weight: 500;
+}
+
+.protondb_rating_link
+{
+    color: lightgray !important;
+    text-shadow: 1px 0px #000;
+    border-radius: 2px;
+    border-left: 4px solid gray;
+    background-color: #333333 !important;
+    padding-left: 2px;
+    padding-right: 4px;
+}
 
 .protondb_rating_borked
 {
-    color: #FF1919 !important;
+    border-left: 4px solid #FF1919 !important;
 }
 
 .protondb_rating_bronze
 {
-    color: #CD7F32 !important;
+    border-left: 4px solid #CD7F32 !important;
 }
 
 .protondb_rating_silver
 {
-    color: #C0C0C0 !important;
+    border-left: 4px solid #C0C0C0 !important;
 }
 
 .protondb_rating_gold
 {
-    color: #FFD799 !important;
+    border-left: 4px solid #FFD799 !important;
 }
 
 .protondb_rating_platinum
 {
-    color: #B4C7DC !important;
+    border-left: 4px solid #B4C7DC !important;
 }
