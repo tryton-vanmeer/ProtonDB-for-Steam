@@ -9,7 +9,7 @@ function insert_rating(wishlist_row, rating) {
 
         var link = document.createElement('a');
         link.title = 'As seen by protondb.com';
-        link.className = "value protondb_rating protondb_rating_" + rating;
+        link.className = "value protondb_rating_wishlist protondb_rating_" + rating;
         link.href = ProtonDB.HOMEPAGE + 'app/' + appid;
         link.textContent = rating;
 
