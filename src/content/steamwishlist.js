@@ -7,18 +7,7 @@ function insert_rating(wishlist_row, rating) {
         label.className = "label";
         label.textContent = "ProtonDB Rating:";
 
-        var link = document.createElement('a');
-        link.title = 'As seen by protondb.com';
-        link.className = "value protondb_rating_wishlist protondb_rating_" + rating;
-        link.href = ProtonDB.HOMEPAGE + 'app/' + appid;
-        link.textContent = rating;
-
-        chrome.storage.local.get('new_tab', result => {
-            if (result.new_tab) {
-                link.target = '_blank'
-            }
-        });
-
+        var container = getRatingContainer(rating, "value");
         var element = wishlist_row.getElementsByClassName("stats")[0];
 
         if (element) {

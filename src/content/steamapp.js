@@ -2,31 +2,12 @@
 
 // Insert the ProtonDB rating below DEVELOPER/PUBLISHER
 function insert_rating(rating) {
-    var container = document.createElement("div");
-
-    container.className = "dev_row protondb_rating_row";
-    container.title = "As seen by protondb.com";
-
-    var link = document.createElement("a");
-    link.className = "protondb_rating_link protondb_rating_" + rating;
-
-    link.href = ProtonDB.HOMEPAGE + "app/" + Steam.get_app_id(window.location.href);
-    link.textContent = rating;
-
-    var option_new_tab = chrome.storage.local.get("new_tab", result => {
-        if (result.new_tab) {
-            link.target = "_blank"
-        }
-    });
-
+    var element = document.querySelector(".user_reviews")
     var subtitle = document.createElement("div");
     subtitle.className = "subtitle column'";
     subtitle.textContent = "ProtonDB Rating:";
-
-    container.appendChild(subtitle);
-    container.appendChild(link);
-
-    var element = document.querySelector(".user_reviews")
+    var container = getRatingContainer(rating, "dev_row");
+    container.prepend(subtitle);
 
     if (element)
     {
