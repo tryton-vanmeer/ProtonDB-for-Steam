@@ -1,3 +1,5 @@
+"use strict";
+
 function getRatingContainer(rating, appendToClassName) {
     var container = document.createElement("div");
 

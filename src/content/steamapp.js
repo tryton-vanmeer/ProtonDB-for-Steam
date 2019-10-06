@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 // Insert the ProtonDB rating below DEVELOPER/PUBLISHER
 function insert_rating(rating) {
