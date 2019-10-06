@@ -1,16 +1,15 @@
-'use strict'
+"use strict";
 
 // Insert the ProtonDB rating below DEVELOPER/PUBLISHER
 function insert_rating(rating) {
-    var element = document.querySelector(".user_reviews")
+    var element = document.querySelector(".user_reviews");
     var subtitle = document.createElement("div");
     subtitle.className = "subtitle column'";
     subtitle.textContent = "ProtonDB Rating:";
     var container = getRatingContainer(rating, "dev_row");
     container.prepend(subtitle);
 
-    if (element)
-    {
+    if (element) {
         element.append(container);
     }
 }

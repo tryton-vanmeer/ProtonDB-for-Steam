@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 class Steam {
     // Return a games appid from the url

@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 function insert_rating(wishlist_row, rating) {
         var appid = wishlist_row.attributes["data-app-id"].nodeValue;
