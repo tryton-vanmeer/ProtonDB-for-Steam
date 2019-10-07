@@ -21,22 +21,12 @@
       "matches": ["https://store.steampowered.com/app/*"],
       "js": ["src/libprotondb.js", "src/content/rating.js", "src/content/steamapp.js"],
       "css": ["src/protondb.css"]
-    },
-    {
-        "matches": ["https://store.steampowered.com/wishlist/*"],
-        "js": ["src/libprotondb.js", "src/content/rating.js","src/content/steamwishlist.js"],
-        "css": ["src/protondb.css"]
     }
 ],
 
 "background": {
   "scripts": ["src/background.js"],
   "persistent": false
-},
-
-"options_ui": {
-    "page": "src/options.html",
-    "chrome_style": true
 },
 
 "applications": {
