@@ -7,9 +7,6 @@
 .protondb_rating_row
 {
     margin-top: 13px;
-    text-transform: capitalize;
-    text-shadow: 1px 0px #000;
-    border-radius: 2px;
 }
 
 /* Override wishlist font weight for rating to appear more vibrant  */
@@ -21,6 +18,7 @@
 .protondb_rating_link
 {
     color: lightgray !important;
+    text-transform: capitalize;
     text-shadow: 1px 0px #000;
     border-radius: 2px;
     border-left: 4px solid gray;
@@ -29,18 +27,6 @@
     padding-right: 4px;
     padding-top: 4px;
     margin-top: -4px;
-}
-
-.protondb_rating_wishlist
-{
-    width: 25%;
-    color: lightgray !important;
-    text-shadow: 1px 0px #000;
-    border-radius: 2px;
-    border-left: 4px solid gray;
-    background-color: #333333 !important;
-    padding-left: 2px;
-    padding-right: 4px;
 }
 
 .protondb_rating_borked
