@@ -6,7 +6,7 @@ function insert_rating(rating) {
     var subtitle = document.createElement("div");
     subtitle.className = "subtitle column'";
     subtitle.textContent = "ProtonDB Rating:";
-    var container = ProtonDB.get_rating_container(rating, "dev_row");
+    var container = ProtonDB.get_rating_container(rating, "steam_row");
     container.prepend(subtitle);
 
     if (element) {
