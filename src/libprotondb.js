@@ -29,4 +29,21 @@ class ProtonDB {
             rating => callback(rating)
         );
     }
+
+    static get_rating_container(rating, append_to_class_name) {
+        var container = document.createElement("div");
+    
+        container.className = "protondb_rating_row " + append_to_class_name;
+        container.title = "As seen by the community of ProtonDB.com";
+    
+        var link = document.createElement("a");
+        link.className = "protondb_rating_link protondb_rating_" + rating;
+    
+        link.href = ProtonDB.HOMEPAGE + "app/" + Steam.get_app_id(window.location.href);
+        link.textContent = rating;
+        link.target = "_blank"
+    
+        container.appendChild(link);
+        return container;
+    }
 }
