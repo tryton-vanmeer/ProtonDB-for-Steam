@@ -10,19 +10,18 @@ A CRX file is provided under releases for those who wish to sideload the extensi
 
 <div align=center>
 
-![Screenshot Borked](assets/screenshot_borked.png)
+![Screenshot | Borked rating badge](assets/screenshot_borked.png)
 
-![Screenshot Bronze](assets/screenshot_bronze.png)
+![Screenshot | Bronze rating badge](assets/screenshot_bronze.png)
 
-![Screenshot Silver](assets/screenshot_silver.png)
+![Screenshot | Silver rating badge](assets/screenshot_silver.png)
 
-![Screenshot Gold](assets/screenshot_gold.png)
+![Screenshot | Gold rating badge](assets/screenshot_gold.png)
 
-![Screenshot Platinum](assets/screenshot_platinum.png)
+![Screenshot | Platinum rating badge](assets/screenshot_platinum.png)
 
-![Screenshot Wishlist](assets/screenshot_wishlist.png)
 </div>
 
 ### Chrome extension not found!
-![Screenshot Take Down](https://i.imgur.com/szSIeex.png)
+![Screenshot | Chrome extension taken down](https://i.imgur.com/szSIeex.png)
 Thanks Google!
