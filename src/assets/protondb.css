@@ -15,37 +15,37 @@
     text-transform: capitalize;
     text-shadow: 1px 0px #000;
     border-radius: 2px;
-    border-left: 4px solid gray;
+    border-left: 6px solid gray;
     background-color: #333333 !important;
-    padding-left: 2px;
-    padding-right: 4px;
+    padding-left: 6px;
+    padding-right: 6px;
     padding-top: 2px;
     margin-top: -4px;
 }
 
 .protondb_rating_borked
 {
-    border-left: 4px solid #FF1919 !important;
+    border-color: #FF1919;
 }
 
 .protondb_rating_bronze
 {
-    border-left: 4px solid #CD7F32 !important;
+    border-color: #CD7F32;
 }
 
 .protondb_rating_silver
 {
-    border-left: 4px solid #C0C0C0 !important;
+    border-color: #C0C0C0;
 }
 
 .protondb_rating_gold
 {
-    border-left: 4px solid #FFD799 !important;
+    border-color: #FFD799;
 }
 
 .protondb_rating_platinum
 {
-    border-left: 4px solid #B4C7DC !important;
+    border-color: #B4C7DC;
 }
 
 .steam_row {
