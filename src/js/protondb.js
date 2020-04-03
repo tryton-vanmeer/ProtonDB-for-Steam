@@ -14,7 +14,7 @@ class Steam {
         var subtitle = document.createElement("div");
         subtitle.className = "subtitle column'";
         subtitle.textContent = "ProtonDB Rating:";
-        var container = ProtonDB.get_rating_container(rating, "steam_row");
+        var container = ProtonDB.get_rating_container(rating);
         container.prepend(subtitle);
     
         if (element) {
@@ -44,10 +44,10 @@ class ProtonDB {
         );
     }
 
-    static get_rating_container(rating, append_to_class_name) {
+    static get_rating_container(rating) {
         var container = document.createElement("div");
     
-        container.className = "protondb_rating_row " + append_to_class_name;
+        container.className = "protondb_rating_row " + "steam_row";
         container.title = "As seen by the community of ProtonDB.com";
     
         var link = document.createElement("a");
