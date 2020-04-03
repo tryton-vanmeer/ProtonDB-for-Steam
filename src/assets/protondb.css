@@ -53,6 +53,10 @@
     border-color: #008000;
 }
 
+.protondb_rating_whitelisted {
+    font-size: 1.25em;
+}
+
 .steam_row {
     display: flex;
     line-height: 16px;

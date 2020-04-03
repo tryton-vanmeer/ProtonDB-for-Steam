@@ -44,7 +44,7 @@ class ProtonDB {
         );
     }
 
-    static get_rating_container(rating) {
+    static get_rating_container(rating, whitelisted = false) {
         var container = document.createElement("div");
     
         container.className = "protondb_rating_row " + "steam_row";
@@ -56,6 +56,15 @@ class ProtonDB {
         link.href = ProtonDB.HOMEPAGE + "app/" + Steam.get_app_id(window.location.href);
         link.textContent = rating;
         link.target = "_blank"
+
+        if (whitelisted) {
+            var star = document.createElement("span");
+            star.className = "protondb_rating_whitelisted"
+            star.title = "Whitelisted by Valve";
+            star.textContent = " ★"
+
+            link.appendChild(star);
+        }
     
         container.appendChild(link);
         return container;
