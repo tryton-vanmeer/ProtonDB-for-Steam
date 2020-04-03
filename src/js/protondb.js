@@ -63,9 +63,9 @@ class ProtonDB {
 }
 
 // Main
-if (document.querySelector("span.platform_img.linux") === null) {
-    var appid = Steam.get_app_id(window.location.href);
+var appid = Steam.get_app_id(window.location.href);
 
+if (document.querySelector("span.platform_img.linux") === null) {
     ProtonDB.request_rating(appid, (rating) => {
         if (rating == "pending") {
             Steam.insert_rating("Awaiting reports!");
@@ -73,4 +73,6 @@ if (document.querySelector("span.platform_img.linux") === null) {
             Steam.insert_rating(rating);
         }
     });
+} else {
+    Steam.insert_rating("native");
 }

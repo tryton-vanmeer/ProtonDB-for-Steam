@@ -48,6 +48,11 @@
     border-color: #B4C7DC;
 }
 
+.protondb_rating_native
+{
+    border-color: #008000;
+}
+
 .steam_row {
     display: flex;
     line-height: 16px;
