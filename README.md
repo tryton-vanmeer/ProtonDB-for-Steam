@@ -11,11 +11,9 @@ A CRX file is provided under releases for those who wish to sideload the extensi
 <div align=center>
 
 ![Screenshot | Borked Rating Badge](screenshots/screenshot_borked.png)
-
 ![Screenshot | Bronze Rating Badge](screenshots/screenshot_bronze.png)
 
 ![Screenshot | Silver Rating Badge](screenshots/screenshot_silver.png)
-
 ![Screenshot | Gold Rating Badge](screenshots/screenshot_gold.png)
 
 ![Screenshot | Platinum Rating Badge](screenshots/screenshot_platinum.png)
