@@ -19,7 +19,7 @@
   "content_scripts": [
     {
       "matches": ["https://store.steampowered.com/app/*"],
-      "js": ["src/libprotondb.js", "src/content/rating.js", "src/content/steamapp.js"],
+      "js": ["js/libprotondb.js", "js/steamapp.js"],
       "css": ["assets/protondb.css"]
     }
 ],
