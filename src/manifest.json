@@ -12,15 +12,15 @@
   ],
 
   "icons": {
-    "48": "icons/spcr-48.png",
-    "96": "icons/spcr-96.png"
+    "48": "assets/spcr-48.png",
+    "96": "assets/spcr-96.png"
   },
 
   "content_scripts": [
     {
       "matches": ["https://store.steampowered.com/app/*"],
       "js": ["src/libprotondb.js", "src/content/rating.js", "src/content/steamapp.js"],
-      "css": ["src/protondb.css"]
+      "css": ["assets/protondb.css"]
     }
 ],
 
