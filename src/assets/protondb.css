@@ -9,15 +9,9 @@
     margin-top: 13px;
 }
 
-/* Override wishlist font weight for rating to appear more vibrant  */
-.value.protondb_rating
-{
-    font-weight: 500;
-}
-
 .protondb_rating_link
 {
-    color: lightgray !important;
+    color: #EEEEEE !important;
     text-transform: capitalize;
     text-shadow: 1px 0px #000;
     border-radius: 2px;
