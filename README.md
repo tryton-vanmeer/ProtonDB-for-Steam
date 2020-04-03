@@ -19,8 +19,6 @@ A CRX file is provided under releases for those who wish to sideload the extensi
 ![Screenshot Gold](screenshots/screenshot_gold.png)
 
 ![Screenshot Platinum](screenshots/screenshot_platinum.png)
-
-![Screenshot Wishlist](screenshots/screenshot_wishlist.png)
 </div>
 
 ### Chrome extension not found!
