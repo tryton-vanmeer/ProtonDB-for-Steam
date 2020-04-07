@@ -18,6 +18,8 @@ A CRX file is provided under releases for those who wish to sideload the extensi
 
 ![Screenshot | Platinum Rating Badge](screenshots/screenshot_platinum.png)
 ![Screenshot | Witelist Rating Badge](screenshots/screenshot_whitelist.png)
+
+![Screenshot | Native Rating Badge](screenshots/screenshot_native.png)
 </div>
 
 ### Chrome extension not found!
