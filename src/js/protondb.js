@@ -9,12 +9,12 @@ class Steam {
     }
 
     // Insert the ProtonDB rating below DEVELOPER/PUBLISHER
-    static insert_rating(rating) {
+    static insert_rating(rating, whitelisted = false) {
         var element = document.querySelector(".user_reviews");
         var subtitle = document.createElement("div");
         subtitle.className = "subtitle column'";
         subtitle.textContent = "ProtonDB Rating:";
-        var container = ProtonDB.get_rating_container(rating);
+        var container = ProtonDB.get_rating_container(rating, whitelisted);
         container.prepend(subtitle);
     
         if (element) {
@@ -79,7 +79,7 @@ if (document.querySelector("span.platform_img.linux") === null) {
         if (rating == "pending") {
             Steam.insert_rating("Awaiting reports!");
         } else {
-            Steam.insert_rating(rating);
+            Steam.insert_rating(rating, whitelist.includes(appid) ? true : false);
         }
     });
 } else {
