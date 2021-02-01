@@ -22,17 +22,17 @@
       "js": ["js/protondb.js", "js/whitelist.js"],
       "css": ["assets/protondb.css"]
     }
-],
+  ],
 
-"background": {
-  "scripts": ["js/background.js"],
-  "persistent": false
-},
+  "background": {
+    "scripts": ["js/background.js"],
+    "persistent": false
+  },
 
-"applications": {
-    "gecko": {
-        "id": "{30280527-c46c-4e03-bb16-2e3ed94fa57c}"
-    }
-}
+  "applications": {
+      "gecko": {
+          "id": "{30280527-c46c-4e03-bb16-2e3ed94fa57c}"
+      }
+  }
 
 }
