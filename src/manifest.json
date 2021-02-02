@@ -21,6 +21,11 @@
       "matches": ["https://store.steampowered.com/app/*"],
       "js": ["js/protondb.js", "js/whitelist.js", "js/gamePage.js"],
       "css": ["assets/protondb.css"]
+    },
+    {
+      "matches": ["https://store.steampowered.com/wishlist/*"],
+      "js": ["js/protondb.js", "js/whitelist.js", "js/wishlist.js"],
+      "css": ["assets/protondb.css"]
     }
   ],
 
