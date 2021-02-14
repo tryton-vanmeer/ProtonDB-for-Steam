@@ -2,7 +2,7 @@
 
   "manifest_version": 2,
   "name": "ProtonDB for Steam",
-  "version": "1.7.0",
+  "version": "1.8.0",
 
   "description": "Shows ratings from protondb.com on Steam",
 
