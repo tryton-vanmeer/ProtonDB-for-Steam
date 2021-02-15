@@ -33,7 +33,7 @@ class Wishlist {
     
     static load_ratings() {
         const rows = document.getElementById('wishlist_ctn');
-        for (var row of rows.getElementsByClassName('wishlist_row')) {
+        for (const row of rows.getElementsByClassName('wishlist_row')) {
             const app_id = row.getAttribute('data-app-id');
             const stats_container = row.querySelector('.stats');
     
