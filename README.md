@@ -1,10 +1,15 @@
 # ProtonDB for Steam
 Shows ratings from [protondb.com](https://www.protondb.com/) on Steam
 
+## Installation
+
+### Firefox
+
 [![Get the Addon](https://addons.cdn.mozilla.net/static/img/addons-buttons/AMO-button_1.png)](https://addons.mozilla.org/en-CA/firefox/addon/protondb-for-steam/)
 
-## Chrome
-A CRX file is provided under releases for those who wish to sideload the extension in `Chrome*`.
+### Chrome
+
+[Manually](docs/Install-Manually.md)
 
 ## Screenshots
 
