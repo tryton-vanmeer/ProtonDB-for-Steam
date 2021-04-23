@@ -3,10 +3,10 @@ Shows ratings from [protondb.com](https://www.protondb.com/) on Steam
 
 [![Get the Addon](https://addons.cdn.mozilla.net/static/img/addons-buttons/AMO-button_1.png)](https://addons.mozilla.org/en-CA/firefox/addon/protondb-for-steam/)
 
-### Chrome
+## Chrome
 A CRX file is provided under releases for those who wish to sideload the extension in `Chrome*`.
 
-### Screenshots
+## Screenshots
 
 <div align=center>
 
@@ -21,7 +21,3 @@ A CRX file is provided under releases for those who wish to sideload the extensi
 
 ![Screenshot | Native Rating Badge](screenshots/screenshot_native.png)
 </div>
-
-### Chrome extension not found!
-![Screenshot | Chrome Extension Taken Down](https://i.imgur.com/szSIeex.png)
-Thanks Google!
