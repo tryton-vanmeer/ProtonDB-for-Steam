@@ -6,7 +6,7 @@ class ProtonDB {
 
     static request_rating(appid, callback)
     {
-        chrome.runtime.sendMessage(
+        browser.runtime.sendMessage(
             {contentScriptQuery: "queryRating", appid: appid},
             rating => callback(rating)
         );
