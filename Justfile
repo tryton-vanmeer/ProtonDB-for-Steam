@@ -7,4 +7,7 @@ lint:
   npx web-ext lint --source-dir ./src
 
 run:
-  npx web-ext run -t firefox-desktop --source-dir ./src --url {{ steam_url }}
+  npx web-ext run --target firefox-desktop --source-dir ./src --url {{ steam_url }}
+
+run-android:
+  bin/run-android.sh
