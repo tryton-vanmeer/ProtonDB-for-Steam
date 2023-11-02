@@ -45,12 +45,10 @@
     ],
     "persistent": false
   },
-  "applications": {
+  "browser_specific_settings": {
     "gecko": {
       "id": "{30280527-c46c-4e03-bb16-2e3ed94fa57c}"
-    }
-  },
-  "browser_specific_settings": {
+    },
     "gecko_android": {}
   }
 }
