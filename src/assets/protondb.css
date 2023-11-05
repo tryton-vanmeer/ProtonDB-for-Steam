@@ -1,63 +1,39 @@
-/* Copyright 2018 Tryton Van Meer
- *
- * This software is licensed under the GNU GPL (version 3.0 or later).
- * See the LICENSE file in this distribution.
- */
-
-.protondb_rating_row
-{
-    margin-top: 13px;
-}
-
 .protondb_rating_link
 {
-    color: #EEEEEE !important;
     text-transform: capitalize;
-    text-shadow: 1px 0px #000;
-    border-radius: 2px;
-    border-left: 6px solid gray;
-    background-color: #333333 !important;
-    padding-left: 6px;
-    padding-right: 6px;
-    padding-top: 2px;
-    margin-top: -4px;
+}
+
+.protondb_rating_link:hover
+{
+    color: #FFFFFF !important;
 }
 
 .protondb_rating_borked
 {
-    border-color: #FF1919;
+    color: #FF1919 !important;
 }
 
 .protondb_rating_bronze
 {
-    border-color: #CD7F32;
+    color: #CD7F32 !important;
 }
 
 .protondb_rating_silver
 {
-    border-color: #C0C0C0;
+    color: #C0C0C0 !important;
 }
 
 .protondb_rating_gold
 {
-    border-color: #FFD799;
+    color: #FFD799 !important;
 }
 
 .protondb_rating_platinum
 {
-    border-color: #B4C7DC;
+    color: #B4C7DC !important;
 }
 
 .protondb_rating_native
 {
-    border-color: #008000;
-}
-
-.protondb_rating_whitelisted {
-    font-size: 1.25em;
-}
-
-.steam_row {
-    display: flex;
-    line-height: 16px;
+    color: #008000 !important;
 }
