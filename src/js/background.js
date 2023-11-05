@@ -1,24 +1,34 @@
 "use strict";
 
-browser.runtime.onMessage.addListener((request, sender, sendResponse) => {
-    if (request.contentScriptQuery == "queryRating") {
-        var url = "https://www.protondb.com/" + "api/v1/reports/summaries/" + request.appid + ".json";
+const PROTONDB_API_SUMMARY =
+  "https://www.protondb.com/api/v1/reports/summaries";
 
-        fetch(url)
-            .then(response => {
-                if (!response.ok) {
-                    if (response.status == 404) {
-                        sendResponse("pending");
-                    }
-                    throw Error(response.status);
-                }
+function protondbRequestRating(request, sendResponse) {
+  var url = `${PROTONDB_API_SUMMARY}/${request.appid}.json`;
 
-                return response.json();
-            })
-            .then(data => sendResponse(data.tier))
-            .catch(error => console.log(error))
+  fetch(url)
+    .then((response) => {
+      if (!response.ok) {
+        if (response.status == 404) {
+          sendResponse("pending");
+        }
+        throw Error(response.status);
+      }
 
-        return true;
-    }
+      return response.json();
+    })
+    .then((data) => sendResponse(data.tier))
+    .catch((error) => console.log(error));
+
+  return true;
 }
-);
+
+function onMessage(request, _, sendResponse) {
+  if (request.contentScriptQuery == "queryRating") {
+    return protondbRequestRating(request, sendResponse);
+  }
+
+  return false;
+}
+
+browser.runtime.onMessage.addListener(onMessage);
