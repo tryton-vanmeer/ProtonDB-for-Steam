@@ -1,39 +1,31 @@
-.protondb_rating_link
-{
+.protondb_rating_link {
     text-transform: capitalize;
 }
 
-.protondb_rating_link:hover
-{
+.protondb_rating_link:hover {
     color: #FFFFFF !important;
 }
 
-.protondb_rating_borked
-{
+.protondb_rating_borked {
     color: #FF1919 !important;
 }
 
-.protondb_rating_bronze
-{
+.protondb_rating_bronze {
     color: #CD7F32 !important;
 }
 
-.protondb_rating_silver
-{
+.protondb_rating_silver {
     color: #C0C0C0 !important;
 }
 
-.protondb_rating_gold
-{
+.protondb_rating_gold {
     color: #FFD799 !important;
 }
 
-.protondb_rating_platinum
-{
+.protondb_rating_platinum {
     color: #B4C7DC !important;
 }
 
-.protondb_rating_native
-{
+.protondb_rating_native {
     color: #008000 !important;
 }
