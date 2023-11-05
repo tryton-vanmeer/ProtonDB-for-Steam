@@ -1,3 +1,5 @@
+"use strict";
+
 const RATING_APP_DESKTOP_ID = "protondbRatingAppDesktop";
 const RATING_APP_MOBILE_ID = "protondbRatingAppMobile";
 

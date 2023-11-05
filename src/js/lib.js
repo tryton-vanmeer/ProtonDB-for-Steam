@@ -1,3 +1,5 @@
+"use strict";
+
 const PROTONDB_HOMEPAGE = "https://www.protondb.com";
 
 function parseAppId(url) {
