@@ -1,3 +1,6 @@
+const RATING_APP_DESKTOP_ID = "protondbRatingAppDesktop";
+const RATING_APP_MOBILE_ID = "protondbRatingAppMobile";
+
 function insertRatingDesktop(appid) {
   var rootElement = document.querySelector(".glance_ctn_responsive_left");
 
@@ -5,6 +8,7 @@ function insertRatingDesktop(appid) {
   var subtitleColumn = document.createElement("div");
   var summaryColumn = document.createElement("div");
 
+  row.id = RATING_APP_DESKTOP_ID;
   row.className = "protondb_row dev_row";
   subtitleColumn.className = "subtitle column";
   summaryColumn.className = "summary column";
@@ -14,6 +18,7 @@ function insertRatingDesktop(appid) {
 
   row.append(subtitleColumn);
   row.append(summaryColumn);
+
   rootElement.append(row);
 }
 
@@ -23,6 +28,7 @@ function insertRatingMobile(appid) {
   var label = document.createElement("div");
   var content = document.createElement("div");
 
+  label.id = RATING_APP_MOBILE_ID;
   label.className = "grid_label";
   content.className = "grid_content";
 
@@ -33,7 +39,17 @@ function insertRatingMobile(appid) {
   rootElement.append(content);
 }
 
-var appid = parseAppId(window.location.href);
+function insertRatings(appid) {
+  var ratingDesktop = document.getElementById(RATING_APP_DESKTOP_ID);
+  var ratingMobile = document.getElementById(RATING_APP_MOBILE_ID);
 
-insertRatingDesktop(appid);
-insertRatingMobile(appid);
+  if (ratingDesktop === null) {
+    insertRatingDesktop(appid);
+  }
+
+  if (ratingMobile === null) {
+    insertRatingMobile(appid);
+  }
+}
+
+insertRatings(parseAppId(window.location.href));
