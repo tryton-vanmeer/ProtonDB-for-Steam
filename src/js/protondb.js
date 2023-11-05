@@ -14,7 +14,7 @@ class ProtonDB {
     static get_rating_container(rating, whitelisted = false) {
         var container = document.createElement("div");
 
-        container.className = "protondb_rating_row " + "steam_row";
+        container.className = "protondb_rating_row dev_row";
         container.title = "As seen by the community of ProtonDB.com";
 
         var link = document.createElement("a");
