@@ -1,3 +1,7 @@
+.protondb_row {
+    padding-top: 13px;
+}
+
 .protondb_rating_link {
     text-transform: capitalize;
 }

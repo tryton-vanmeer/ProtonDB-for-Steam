@@ -16,9 +16,8 @@
         "https://store.steampowered.com/app/*"
       ],
       "js": [
-        "js/protondb.js",
-        "js/whitelist.js",
-        "js/gamePage.js"
+        "js/lib.js",
+        "js/app.js"
       ],
       "css": [
         "assets/protondb.css"
