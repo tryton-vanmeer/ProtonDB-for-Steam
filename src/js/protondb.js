@@ -18,7 +18,7 @@ class ProtonDB {
         container.title = "As seen by the community of ProtonDB.com";
 
         var link = document.createElement("a");
-        link.className = "protondb_rating_link protondb_rating_" + rating;
+        link.className = `protondb_rating_link protondb_rating_${rating}`;
 
         link.href = ProtonDB.HOMEPAGE + "app/" + Steam.get_app_id(window.location.href);
         link.textContent = rating;
