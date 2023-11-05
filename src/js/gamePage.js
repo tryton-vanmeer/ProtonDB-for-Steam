@@ -8,7 +8,7 @@ class Steam {
 
     // Insert the ProtonDB rating below DEVELOPER/PUBLISHER
     static insert_rating(rating, whitelisted = false) {
-        var element = document.querySelector(".user_reviews");
+        var element = document.querySelector(".glance_ctn_responsive_left");
         var subtitle = document.createElement("div");
         subtitle.className = "subtitle column'";
         subtitle.textContent = "ProtonDB Rating:";
