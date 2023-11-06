@@ -1,7 +1,9 @@
 "use strict";
 
-function insertRating(row) {
+async function insertRating(row) {
   const appid = row.getAttribute("data-app-id");
+  const rating = await getRatingElement(appid);
+
   const statsContainer = row.querySelector(".stats");
 
   if (statsContainer.querySelector(".protondb_rating_link")) {
@@ -15,7 +17,7 @@ function insertRating(row) {
   value.className = "value";
 
   label.textContent = "ProtonDB:";
-  value.append(getRatingElement(appid));
+  value.append(rating);
 
   statsContainer.append(label);
   statsContainer.append(value);
