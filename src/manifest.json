@@ -28,8 +28,7 @@
         "https://store.steampowered.com/wishlist/*"
       ],
       "js": [
-        "js/protondb.js",
-        "js/whitelist.js",
+        "js/lib.js",
         "js/wishlist.js"
       ],
       "css": [
