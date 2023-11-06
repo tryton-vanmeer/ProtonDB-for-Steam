@@ -8,14 +8,11 @@ function parseAppId(url) {
   return parseInt(appid[2], 10);
 }
 
-function protondbRequestRating(appid, callback) {
-  browser.runtime.sendMessage(
-    {
-      contentScriptQuery: "queryRating",
-      appid: appid,
-    },
-    (rating) => callback(rating)
-  );
+function protondbRequestRating(appid) {
+  return browser.runtime.sendMessage({
+    contentScriptQuery: "queryRating",
+    appid: appid,
+  });
 }
 
 function getRatingElement(appid) {
@@ -26,7 +23,7 @@ function getRatingElement(appid) {
   element.href = `${PROTONDB_HOMEPAGE}/app/${appid}`;
   element.target = "_blank";
 
-  protondbRequestRating(appid, (rating) => {
+  protondbRequestRating(appid).then((rating) => {
     if (rating === "pending") {
       element.textContent = "Awaiting reports!";
     } else {
