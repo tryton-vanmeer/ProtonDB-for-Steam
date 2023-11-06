@@ -6,6 +6,10 @@ const RATING_APP_MOBILE_ID = "protondbRatingAppMobile";
 function insertRatingDesktop(appid) {
   var rootElement = document.querySelector(".glance_ctn_responsive_left");
 
+  if (rootElement.querySelector(`#${RATING_APP_DESKTOP_ID}`)) {
+    return;
+  }
+
   var row = document.createElement("div");
   var subtitleColumn = document.createElement("div");
   var summaryColumn = document.createElement("div");
@@ -27,6 +31,10 @@ function insertRatingDesktop(appid) {
 function insertRatingMobile(appid) {
   var rootElement = document.getElementById("appHeaderGridContainer");
 
+  if (rootElement.querySelector(`#${RATING_APP_MOBILE_ID}`)) {
+    return;
+  }
+
   var label = document.createElement("div");
   var content = document.createElement("div");
 
@@ -42,16 +50,8 @@ function insertRatingMobile(appid) {
 }
 
 function insertRatings(appid) {
-  var ratingDesktop = document.getElementById(RATING_APP_DESKTOP_ID);
-  var ratingMobile = document.getElementById(RATING_APP_MOBILE_ID);
-
-  if (ratingDesktop === null) {
-    insertRatingDesktop(appid);
-  }
-
-  if (ratingMobile === null) {
-    insertRatingMobile(appid);
-  }
+  insertRatingDesktop(appid);
+  insertRatingMobile(appid);
 }
 
 insertRatings(parseAppId(window.location.href));
