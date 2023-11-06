@@ -16,7 +16,7 @@ function insertRatingDesktop(appid) {
   summaryColumn.className = "summary column";
 
   subtitleColumn.textContent = "ProtonDB:";
-  summaryColumn.appendChild(getRatingElement(appid));
+  summaryColumn.append(getRatingElement(appid));
 
   row.append(subtitleColumn);
   row.append(summaryColumn);

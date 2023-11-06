@@ -30,10 +30,10 @@ class ProtonDB {
             star.title = "Whitelisted by Valve";
             star.textContent = " ★"
 
-            link.appendChild(star);
+            link.append(star);
         }
 
-        container.appendChild(link);
+        container.append(link);
         return container;
     }
 }
