@@ -6,6 +6,10 @@
     text-transform: capitalize;
 }
 
+.wishlist_row .stats .protondb_rating_link {
+    text-transform: uppercase;
+}
+
 .protondb_rating_link:hover {
     color: #FFFFFF !important;
 }
