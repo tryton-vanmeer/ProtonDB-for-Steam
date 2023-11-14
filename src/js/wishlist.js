@@ -27,9 +27,7 @@ function insertRatings() {
   const rows = document.getElementById("wishlist_ctn");
 
   for (const row of rows.getElementsByClassName("wishlist_row")) {
-    if (insertRating(row)) {
-      continue;
-    }
+    insertRating(row)
   }
 
   setTimeout(insertRatings, 1000);
