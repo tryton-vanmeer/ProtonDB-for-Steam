@@ -37,3 +37,16 @@
 .protondb_rating_native {
     color: #008000 !important;
 }
+
+.gameslistitems_ProtonRating {
+    display: inline-flex;
+    flex-direction: column;
+    font-size: var(--typography-font-size-medium);
+    color: rgba(184, 188, 191, .8);
+}
+
+.gameslistitems_ProtonRatingLabel {
+    font-weight: 700;
+    letter-spacing: .03em;
+    color: var(--typography-color-neutral);
+}
