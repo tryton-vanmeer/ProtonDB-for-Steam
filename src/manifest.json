@@ -34,6 +34,19 @@
       "css": [
         "assets/protondb.css"
       ]
+    },
+    {
+      "matches": [
+        "https://steamcommunity.com/id/*/games",
+        "https://steamcommunity.com/id/*/games?tab=*"
+      ],
+      "js": [
+        "js/lib.js",
+        "js/games.js"
+      ],
+      "css": [
+        "assets/protondb.css"
+      ]
     }
   ],
   "background": {
