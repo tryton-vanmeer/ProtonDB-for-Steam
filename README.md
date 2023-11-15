@@ -9,9 +9,12 @@ Shows ratings from [protondb.com](https://www.protondb.com/) on Steam
 
 <div align=center>
 
-![Screenshot | Borked Rating Badge](screenshots/screenshot_borked.png)
-![Screenshot | Bronze Rating Badge](screenshots/screenshot_bronze.png)
-![Screenshot | Silver Rating Badge](screenshots/screenshot_silver.png)
-![Screenshot | Gold Rating Badge](screenshots/screenshot_gold.png)
-![Screenshot | Platinum Rating Badge](screenshots/screenshot_platinum.png)
+![Screenshot | Borked Rating](screenshots/screenshot_borked.png)
+![Screenshot | Bronze Rating](screenshots/screenshot_bronze.png)
+![Screenshot | Silver Rating](screenshots/screenshot_silver.png)
+![Screenshot | Gold Rating](screenshots/screenshot_gold.png)
+![Screenshot | Platinum Rating](screenshots/screenshot_platinum.png)
+![Screenshot | Mobile](screenshots/screenshot_mobile.png)
+![Screenshot | Wishlist](screenshots/screenshot_wishlist.png)
+![Screenshot | Profile Games](screenshots/screenshot_games.png)
 </div>
