@@ -12,7 +12,18 @@ async function insertRating(panel) {
   }
 
   // increase height of panel to accommodate new row
-  const inner = panel.childNodes[0].childNodes[0];
+  const draggable =
+    document.querySelectorAll("div[data-rfd-droppable-id]").length == 1;
+
+  var inner;
+
+  // "Your Rank" sort option needs a different div adjusted
+  if (draggable) {
+    inner = panel.childNodes[0].childNodes[0];
+  } else {
+    inner = panel.childNodes[0];
+  }
+
   const innerHeight = parseInt(getComputedStyle(inner).height);
   inner.style.height = `${innerHeight + 20}px`;
 
