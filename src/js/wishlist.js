@@ -1,13 +1,33 @@
 "use strict";
 
-async function insertRating(row) {
-  const statsContainer = row.querySelector(".stats");
+function isGrid(div) {
+  return getComputedStyle(div).display == "grid";
+}
 
-  if (statsContainer.querySelector(".protondb_rating_link")) {
+async function insertRating(panel) {
+  const grid = [...panel.querySelectorAll("div")].filter(isGrid)[0];
+
+  if (grid.querySelector(".protondb_rating_link")) {
     return true;
   }
 
-  const appid = row.getAttribute("data-app-id");
+  // increase height of panel to accommodate new row
+  const draggable =
+    document.querySelectorAll("div[data-rfd-droppable-id]").length == 1;
+
+  var inner;
+
+  // "Your Rank" sort option needs a different div adjusted
+  if (draggable) {
+    inner = panel.childNodes[0].childNodes[0];
+  } else {
+    inner = panel.childNodes[0];
+  }
+
+  const innerHeight = parseInt(getComputedStyle(inner).height);
+  inner.style.height = `${innerHeight + 20}px`;
+
+  const appid = parseAppId(panel.querySelector("a").href);
   const rating = await getRatingElement(appid);
 
   const label = document.createElement("div");
@@ -19,15 +39,15 @@ async function insertRating(row) {
   label.textContent = "ProtonDB:";
   value.append(rating);
 
-  statsContainer.append(label);
-  statsContainer.append(value);
+  grid.append(label);
+  grid.append(value);
 }
 
 function insertRatings() {
-  const rows = document.getElementById("wishlist_ctn");
+  const panels = document.querySelectorAll("div.Panel[data-index]");
 
-  for (const row of rows.getElementsByClassName("wishlist_row")) {
-    insertRating(row);
+  for (const panel of panels) {
+    insertRating(panel);
   }
 
   setTimeout(insertRatings, 1000);
