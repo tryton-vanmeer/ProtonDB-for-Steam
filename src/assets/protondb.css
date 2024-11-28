@@ -4,9 +4,10 @@
 
 .protondb_rating_link {
     text-transform: capitalize;
+    color: #67c1f5
 }
 
-.wishlist_row .stats .protondb_rating_link {
+.Panel .protondb_rating_link {
     text-transform: uppercase;
 }
 
