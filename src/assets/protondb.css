@@ -9,6 +9,7 @@
 
 .Panel .protondb_rating_link {
     text-transform: uppercase;
+    text-decoration: none;
 }
 
 .protondb_rating_link:hover {
